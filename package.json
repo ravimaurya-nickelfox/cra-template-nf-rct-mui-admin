@@ -1,0 +1,11 @@
+{
+  "name": "cra-template-nf-react",
+  "version": "1.0.0",
+  "description": "React Js + Material UI template",
+  "keywords": [
+    "react-template",
+    "custom-react-template"
+  ],
+  "author": "Ravi K",
+  "license": "ISC"
+}
