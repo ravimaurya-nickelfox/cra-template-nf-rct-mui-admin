@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect, Route } from "react-router";
 import PublicLayout from "../layout/publicLayout";
-import { useIsLoggedIn } from "hooks";
+import { useIsLoggedIn } from "hooks/state";
 
 const PublicWrapper = ({ component: Component, ...rest }) => {
   const isLoggedIn = useIsLoggedIn();

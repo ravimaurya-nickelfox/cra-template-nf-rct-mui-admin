@@ -6,7 +6,7 @@ import Error404 from "pages/Error404";
 import AppLoader from "components/Loader/AppLoader";
 import PublicWrapper from "../hoc/PublicWrapper";
 import AuthWrapper from "../hoc/AuthWrapper";
-import { useIsLoggedIn } from "hooks";
+import { useIsLoggedIn } from "hooks/state";
 
 const Router = () => {
   const isLoggedIn = useIsLoggedIn();

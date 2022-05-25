@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Redirect } from "react-router";
-import { useIsLoggedIn } from "hooks";
+import { useIsLoggedIn } from "hooks/state";
 import PrivateLayout from "../layout/privateLayout";
 
 const AuthWrapper = ({ component: Component, ...rest }) => {
