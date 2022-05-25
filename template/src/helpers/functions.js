@@ -1,6 +1,4 @@
 import moment from "moment";
-// eslint-disable-next-line import/no-extraneous-dependencies
-import mergeWith from "lodash/mergeWith";
 import { window } from "global";
 
 // returns a negative number for dates that have already passed
@@ -101,10 +99,6 @@ export function customizer(objValue, srcValue, key) {
   }
 }
 
-export function entityMerge(target, source) {
-  return mergeWith(target, source, customizer);
-}
-
 // create a application/x-www-form-urlencoded compliant url
 export function createFormURL(values) {
   const formBody = [];
@@ -115,25 +109,6 @@ export function createFormURL(values) {
   });
   return formBody.join("&");
 }
-
-export const openLink = (link, newTab = false) => {
-  if (isWeb()) {
-    if (newTab) {
-      window.open(link);
-      return;
-    }
-    window.location.href = link;
-    return;
-  }
-
-  Linking.canOpenURL(link).then((supported) => {
-    if (supported) {
-      Linking.openURL(link);
-    } else {
-      console.error("Don't know how to open URI: ", link);
-    }
-  });
-};
 
 // force url to use https
 export const withHttp = (url) => {
